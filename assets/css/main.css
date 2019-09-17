@@ -1384,7 +1384,8 @@ hr {
 .testimonial {
   background: #34363a;
   position: relative;
-  background: url(../img/testimonial.jpg);
+  background-image: url(../img/class.jpg);
+  background-size: cover;
 }
 .testimonial .section-title {
   color: #fff;

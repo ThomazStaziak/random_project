@@ -1553,11 +1553,11 @@ hr {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   padding: 8px 20px;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #ccc;
 }
 
 .form-control:focus {
-  border-color: #cd381c;
+  border-color: #ccc;
   box-shadow: none;
   outline: none;
 }
@@ -1756,4 +1756,62 @@ textarea {
   color: #cd381c;
 }
 
-/*# sourceMappingURL=main.css.map */
+.circle {
+  stroke: #cd381c;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.playBut {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+}
+.playBut .triangle {
+  -webkit-transition: all 0.7s ease-in-out;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: #000;
+  transform: translateY(0);
+}
+.playBut:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #cd381c;
+  animation: nudge 0.7s ease-in-out;
+}
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.playBut:hover .circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.watch-sentence {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+}
+
+.playBut:hover .watch-sentence,
+.watch-sentence:hover {
+  color: #cd381c;
+}

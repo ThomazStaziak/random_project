@@ -21,6 +21,8 @@ inputs.forEach(
         input.classList.add("border-danger");
         input.nextElementSibling.innerHTML =
           '<span class="text-danger">O CPF precisa ser um CPF válido</span>';
+      } else if (input.getAttribute("id") == "email") {
+        input.value = input.value.trim();
       } else {
         if (input.classList.value.includes("border-danger"))
           input.classList.replace("border-danger", "border-success");

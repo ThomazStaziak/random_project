@@ -48,7 +48,7 @@ optIn.onchange = () => {
   } else {
     button.style.cssText =
       "cursor: pointer; background-color: #cd381c99; border-radius: 5px; color: #fff; font-weight: bold; border: none";
-    button.setAttribute("disabled");
+    button.setAttribute("disabled", "");
   }
 };
 
